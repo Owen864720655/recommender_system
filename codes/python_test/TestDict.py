@@ -15,18 +15,22 @@ print dict.pop("b")
 print dict
 dict.clear()
 print dict
+
 #字典的遍历
 dict = {"a" : "apple", "b" : "banana", "g" : "grape", "o" : "orange"}
 for k in dict:
     print "dict[%s] =" % k,dict[k]
+    
 #字典items()的使用
 dict = {"a" : "apple", "b" : "banana", "c" : "grape", "d" : "orange"}
 #每个元素是一个key和value组成的元组，以列表的方式输出
 print dict.items()
+
 #调用items()实现字典的遍历
 dict = {"a" : "apple", "b" : "banana", "g" : "grape", "o" : "orange"}
 for (k, v) in dict.items():
     print "dict[%s] =" % k, v
+    
 #调用iteritems()实现字典的遍历
 dict = {"a" : "apple", "b" : "banana", "c" : "grape", "d" : "orange"}
 print dict.iteritems()
@@ -54,6 +58,7 @@ print dict.items()
 dict = {"a" : "apple", "b" : "banana", "c" : "grape", "d" : "orange"}
 it = dict.iteritems()
 print it
+
 #字典中元素的获取方法
 dict = {"a" : "apple", "b" : "banana", "c" : "grape", "d" : "orange"}
 print dict
@@ -65,24 +70,28 @@ if "key1" in D:
     print D["key1"]
 else:
     print "None"
+    
 #字典的更新
 dict = {"a" : "apple", "b" : "banana"}
 print dict
 dict2 = {"c" : "grape", "d" : "orange"}
 dict.update(dict2)
 print dict
+
 #udpate()的等价语句
 D = {"key1" : "value1", "key2" : "value2"}
 E = {"key3" : "value3", "key4" : "value4"}
 for k in E:
     D[k] = E[k]
 print D
+
 #字典E中含有字典D中的key
 D = {"key1" : "value1", "key2" : "value2"}
 E = {"key2" : "value3", "key4" : "value4"}
 for k in E:
     D[k] = E[k]
 print D
+
 #设置默认值
 dict = {}
 dict.setdefault("a")
@@ -90,13 +99,17 @@ print dict
 dict["a"] = "apple"
 dict.setdefault("a","default")
 print dict
+
 #调用sorted()排序
 dict = {"a" : "apple", "b" : "grape", "c" : "orange", "d" : "banana"}
 print dict  
+
 #按照key排序 
 print sorted(dict.items(), key=lambda d: d[0])
+
 #按照value排序 
 print sorted(dict.items(), key=lambda d: d[1])
+
 #字典的浅拷贝
 dict = {"a" : "apple", "b" : "grape"}
 dict2 = {"c" : "orange", "d" : "banana"}
